@@ -76,7 +76,7 @@ class QuestionView extends Component {
 
   submitSearch = (searchTerm) => {
     $.ajax({
-      url: `/questions`, //TODO: update request URL
+      url: `/questions/search`, //TODO: update request URL
       type: "POST",
       dataType: 'json',
       contentType: 'application/json',
@@ -105,7 +105,12 @@ class QuestionView extends Component {
           url: `/questions/${id}`, //TODO: update request URL
           type: "DELETE",
           success: (result) => {
-            this.getQuestions();
+            // this.getQuestions();
+            // just update state rather then refetch data
+            this.setState({
+              questions: this.state.questions.filter(q => !(q.id === id))
+            });
+
           },
           error: (error) => {
             alert('Unable to load questions. Please try your request again')
