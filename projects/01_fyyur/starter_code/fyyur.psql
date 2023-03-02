@@ -225,21 +225,21 @@ COPY public.show (id, artist_id, venue_id, start_time) FROM stdin;
 -- Name: Artist_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Artist_id_seq"', 1, false);
+SELECT pg_catalog.setval('public."Artist_id_seq"', 10, false);
 
 
 --
 -- Name: Venue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Venue_id_seq"', 3, true);
+SELECT pg_catalog.setval('public."Venue_id_seq"', 10, true);
 
 
 --
 -- Name: show_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.show_id_seq', 7, true);
+SELECT pg_catalog.setval('public.show_id_seq', 10, true);
 
 
 --
