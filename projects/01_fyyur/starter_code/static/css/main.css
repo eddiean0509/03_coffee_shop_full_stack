@@ -209,3 +209,23 @@ h2.monospace {
 .subtitle {
   opacity: 0.5;
 }
+
+/* show search */
+.navbar-nav.show-search {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+.navbar-nav.show-search .search-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+.navbar-nav.show-search .search-input {
+    height: 40px;
+    padding-left: 24px;
+}
+.delete-form {
+    display: inline;
+}

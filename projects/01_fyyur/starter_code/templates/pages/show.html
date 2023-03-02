@@ -1,14 +1,27 @@
+{#
 {% extends 'layouts/main.html' %}
 {% block title %}Show Search{% endblock %}
+
+    included in shows.html
+#}
 {% block content %}
 
-    <div class="page-header">
+    <div class="page-header text-center">
         <h1>Fyyur Search!</h1>
     </div>
-    <p class="lead"> Show Search </p>
+    <p class="lead text-center"> Show Search </p>
 
-    <ul class="nav nav-pills">
-        <li class="active"><a>Shows</a></li>
+    <ul class="nav nav-pills navbar-nav show-search">
+        <li>
+            <form id="search-form" class="search" method="post" action="/shows/search">
+                <input class="form-control search-input"
+                  type="search"
+                  name="search_term"
+                  placeholder="Find a show"
+                  aria-label="Search">
+            </form>
+        </li>
+        <li class="active"><a class="search-btn" href="javascript:{}" onclick="document.getElementById('search-form').submit();">Shows</a></li>
     </ul>
 
 {#    Todo implement show search frontend #}

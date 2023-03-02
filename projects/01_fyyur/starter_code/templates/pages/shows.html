@@ -1,6 +1,9 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Fyyur | Shows{% endblock %}
 {% block content %}
+<div class="row show-search">
+    {% include "pages/show.html" %}
+</div>
 <div class="row shows">
     {%for show in shows %}
     <div class="col-sm-4">
