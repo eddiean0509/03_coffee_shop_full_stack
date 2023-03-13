@@ -31,7 +31,7 @@ class AuthError(Exception):
     return the token part of the header
 '''
 def get_token_auth_header():
-    # refer to https://auth0.com/docs/quickstart/backend/python/01-authorization#validate-access-tokens
+    # raise Exception('Not Implemented')
 
     auth_header = request.headers.get("Authorization", None)
     if not auth_header:
@@ -63,6 +63,8 @@ def get_token_auth_header():
     return true otherwise
 '''
 def check_permissions(permission, payload):
+    # raise Exception('Not Implemented')
+
     if "permissions" not in payload:
         raise AuthError({
             "code": "rbac_misconfigured",
@@ -91,7 +93,7 @@ def check_permissions(permission, payload):
     !!NOTE urlopen has a common certificate error described here: https://stackoverflow.com/questions/50236117/scraping-ssl-certificate-verify-failed-error-for-http-en-wikipedia-org
 '''
 def verify_decode_jwt(token):
-    # refer to https://auth0.com/docs/quickstart/backend/python/01-authorization#validate-access-tokens
+    # raise Exception('Not Implemented')
 
     # it should be an Auth0 token with key id (kid)
     header = jwt.get_unverified_header(token)
@@ -155,7 +157,6 @@ def verify_decode_jwt(token):
 
     # return the decoded payload
     return payload
-
 
 
 '''

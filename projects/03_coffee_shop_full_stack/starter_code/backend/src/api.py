@@ -51,7 +51,7 @@ def get_drinks():
 
 @app.route("/drinks-detail", methods=["GET"])
 @requires_auth("get:drinks-detail")
-def get_drink_detail(payload):
+def get_drinks_detail(payload):
 
     drinks = [drink.long() for drink in Drink.query]
     return jsonify({"success": True, "drinks": drinks}), 200
@@ -70,6 +70,10 @@ def get_drink_detail(payload):
 @app.route("/drinks", methods=["POST"])
 @requires_auth("post:drinks")
 def create_drink(payload):
+    """
+    data:
+    { "title": "title", "recipe": [ { "color": "red", "name": "wine", "parts": 2 } ] }
+    """
 
     data = request.get_json()
     title = data.get("title")
@@ -93,7 +97,7 @@ def create_drink(payload):
             "message": str(e),
         }), 400
 
-    drinks = [drink.short()]
+    drinks = [drink.long()]
     return jsonify({"success": True, "drinks": drinks}), 200
 
 
@@ -112,6 +116,10 @@ def create_drink(payload):
 @app.route("/drinks/<int:id>", methods=["PATCH"])
 @requires_auth("patch:drinks")
 def update_drink(payload, id):
+    """
+    data:
+    { "title": "title", "recipe": [ { "color": "red", "name": "wine", "parts": 2 } ] }
+    """
 
     data = request.get_json()
     title = data.get("title")
@@ -139,7 +147,7 @@ def update_drink(payload, id):
             "message": str(e),
         }), 400
 
-    drinks = [drink.short()]
+    drinks = [drink.long()]
     return jsonify({"success": True, "drinks": drinks}), 200
 
 

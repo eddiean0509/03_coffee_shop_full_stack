@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 
 import { Platform } from '@ionic/angular';
+import { By } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -45,12 +46,11 @@ describe('AppComponent', () => {
   });
 
   // TODO: add more tests!
-  it('should have a menu with 3 items', () => {
+  it('should have one app element', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     const menuItems = fixture.debugElement.queryAll(By.css('ion-app'));
     console.log(fixture.debugElement.nativeNode);
     expect(menuItems.length).toEqual(1);
   });
-
 });

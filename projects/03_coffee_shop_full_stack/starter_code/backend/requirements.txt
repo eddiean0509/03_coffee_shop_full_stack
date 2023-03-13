@@ -21,3 +21,8 @@ typed-ast==1.4.2
 Werkzeug==0.15.6
 wrapt==1.11.1
 Flask-Cors==3.0.8
+
+# python>=3.7,<=3.8
+
+# after pip isntall, force upgrade pycryptodome !!!!
+# pip install pycryptodome==3.11 --upgrade --no-deps
