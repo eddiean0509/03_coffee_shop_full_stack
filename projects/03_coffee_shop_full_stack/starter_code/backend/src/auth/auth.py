@@ -5,7 +5,7 @@ from jose import jwt
 from urllib.request import urlopen
 
 
-AUTH0_DOMAIN = 'dev-xz10i0s76g6yta5h.us.auth0.com'
+AUTH0_DOMAIN = 'dev-hpy3w0iqgvxjbq0p.us.auth0.com'
 ALGORITHMS = ['RS256']
 API_AUDIENCE = 'coffeeproject'
 
@@ -118,7 +118,7 @@ def verify_decode_jwt(token):
         raise AuthError({
             "code": "invalid_header",
             "description": "Unable to find the appropriate key."
-        }, 401)
+        }, 403)
 
     # it should decode the payload from the token
     try:

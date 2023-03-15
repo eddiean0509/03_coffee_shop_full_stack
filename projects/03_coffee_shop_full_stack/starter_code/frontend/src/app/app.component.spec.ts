@@ -8,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 
-import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
 

@@ -6,8 +6,6 @@ import { ModalController } from '@ionic/angular';
 
 import { DrinkMenuPage } from './drink-menu.page';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ModalController } from '@ionic/angular';
 
 describe('DrinkMenuPage', () => {
   let component: DrinkMenuPage;

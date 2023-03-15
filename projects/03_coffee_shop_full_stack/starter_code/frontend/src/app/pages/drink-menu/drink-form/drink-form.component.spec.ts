@@ -6,8 +6,6 @@ import { ModalController } from '@ionic/angular';
 
 import { DrinkFormComponent } from './drink-form.component';
 
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ModalController } from '@ionic/angular';
 
 describe('DrinkFormComponent', () => {
   let component: DrinkFormComponent;
